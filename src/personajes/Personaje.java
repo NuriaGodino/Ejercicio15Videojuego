@@ -6,7 +6,7 @@ public abstract class Personaje {
 	
 	private String nombre;
 	private Arma arma;
-	private Integer salud;
+	private Integer salud = 100;
 	
 	public String getNombre() {
 		return nombre;
@@ -24,12 +24,20 @@ public abstract class Personaje {
 		return salud;
 	}
 	public void setSalud(Integer salud) {
-		this.salud = salud;
+		if(this.getSalud() > 0) {
+			this.salud = salud;
+		}else {
+			this.salud = 0;
+		}
+		
 	}
 	
 	public abstract void atacar(Personaje p);
+	public abstract boolean esCritico();
 	
-	public abstract void esAtacado(Integer daño);
-	
+	public int esquivar() {
+		int random = (int) (Math.random()*2); //genera numero aleatorio entre 0 y el 1
+		return random;
+	}
 	
 }
