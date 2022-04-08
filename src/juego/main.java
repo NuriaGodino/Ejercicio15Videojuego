@@ -18,12 +18,11 @@ public class main {
 
 	public static void main(String[] args) {
 
-		List<Arma> arma = creacionDeArmas();
 		List<Personaje> personajes = creacionPersonajes();
 
 		System.out.println("Bienvenidos al juego MArvel RPG");
 		Scanner sc = new Scanner(System.in);
-		boolean fin = false;
+		
 
 		new main().elegirTuPersonaje();
 		int opciones = sc.nextInt();
@@ -164,20 +163,8 @@ public class main {
 			System.out.println("El personaje elegido es: " + personajes.get(4).getNombre()); 
 			break;
 		}
-
-		// Armas
-		/*
-		 * Arma a1 = new Arco(); Arma a2 = new Espada();
-		 * 
-		 * a1.setDañoMax(10); a2.setDañoMax(25); // Creo personajes Personaje p1 = new
-		 * Guerrero(); Personaje p2 = new Mago();
-		 * 
-		 * p1.setArma(a1); p1.setNombre("Nuria"); p1.setSalud(2000);
-		 * 
-		 * p2.setArma(a2); p2.setNombre("Godinus"); p2.setSalud(100);
-		 * 
-		 * new main().combate(p1, p2);
-		 */
+		
+		sc.close();
 
 	}
 
